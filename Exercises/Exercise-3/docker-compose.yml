@@ -1,0 +1,16 @@
+
+services:
+  test:
+    build: .
+    image: exercise-3
+    volumes:
+      - .:/app
+    command: python3 -m pytest
+
+  run:
+    build: .
+    image: exercise-3
+    volumes: 
+      - .:/app
+      - ./downloads:/app/downloads
+    command: python3 main.py

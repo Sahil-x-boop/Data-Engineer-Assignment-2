@@ -1,0 +1,48 @@
+*.idea*
+*.DS_Store*
+*postgres-data*
+__pycache__
+*.log
+venv
+node_modules
+.git
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Data directories
+downloads/
+output/
+data/*.zip
+data/*.gz
+data/*.csv
+data/*.json
+
+# Logs and temp
+*.log
+*.tmp
+
+# Docker artifacts
+*.pid
+*.sock
+.docker/
+*.tar
+
+# System and editor files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS temp files
+~$*downloads/

@@ -1,0 +1,18 @@
+
+services:
+  test:
+    build: .
+    image: "exercise-1"
+    container_name: exercise1_test
+    command: python3 -m pytest
+    volumes:
+      - .:/app
+
+  run:
+    build: .
+    image: "exercise-1"
+    container_name: exercise1_run
+    command: python3 main.py
+    volumes:
+      - .:/app
+      - ./downloads:/app/downloads

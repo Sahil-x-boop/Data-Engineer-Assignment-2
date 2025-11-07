@@ -1,0 +1,10 @@
+
+services:
+  run:
+    build: .             # Builds image from Dockerfile in current dir
+    image: "exercise-2"  # Tags the built image as 'exercise-2'
+    command: python3 main.py
+    volumes:
+      - .:/app
+      - ./downloads:/app/downloads
+

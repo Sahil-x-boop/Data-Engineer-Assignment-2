@@ -1,15 +1,16 @@
+version: "3.9"
 
 services:
   postgres:
     image: postgres:15
-    container_name: exercise5_db
+    container_name: exercise-5_db
     restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: exercise5
     ports:
-      - "5432:5432"
+      - "5433:5433"
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
     healthcheck:
@@ -18,9 +19,9 @@ services:
       timeout: 5s
       retries: 5
 
-  run:
+  app:
     build: .
-    container_name: exercise5_app
+    container_name: exercise-5_app
     depends_on:
       postgres:
         condition: service_healthy
@@ -33,16 +34,3 @@ services:
     volumes:
       - .:/app
     command: python3 main.py
-
-  test:
-    build: .
-    container_name: exercise5_test
-    depends_on:
-      postgres:
-        condition: service_healthy
-    volumes:
-      - .:/app
-    command: python3 -m pytest
-
-volumes:
-  postgres_data:

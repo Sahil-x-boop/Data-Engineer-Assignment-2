@@ -15,7 +15,7 @@ hard-drive failure data files as our source data.
 is where your `PySpark` code to complete the exercise should go.
    
 4. Once you have finished the project or want to test run your code,
-   run the following command `docker-compose up run` from inside the `Exercises/Exercise-7` directory
+   run the following command `docker compose up run` from inside the `Exercises/Exercise-7` directory
 
 #### Problems Statement
 There is a folder called `data` in this current directory, `Exercises/Exercise-7`. Inside this

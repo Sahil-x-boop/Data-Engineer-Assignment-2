@@ -46,3 +46,7 @@ Thumbs.db
 
 # OS temp files
 ~$*downloads/
+
+# Ignore extracted data and output reports
+Exercises/Exercise-7/unzipped/
+Exercises/Exercise-7/reports/

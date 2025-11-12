@@ -1,2 +1,1 @@
-pytest
-polars
+polars==1.6.0

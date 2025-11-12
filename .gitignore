@@ -7,7 +7,7 @@ venv
 node_modules
 .git
 # Byte-compiled / cache
-__pycache__/
+
 *.pyc
 *.pyo
 *.pyd
@@ -50,3 +50,6 @@ Thumbs.db
 # Ignore extracted data and output reports
 Exercises/Exercise-7/unzipped/
 Exercises/Exercise-7/reports/
+electric_cars.duckdb
+reports/
+*.parquet

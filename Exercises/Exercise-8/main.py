@@ -17,7 +17,7 @@ def main():
     
     print("\nWeekly stats:")
     popular_vehicles = popular_vehicle_by_postalcode(conn)
-    print(popular_vehicles.head())
+    print(popular_vehicles.head(50))
 
     print("\nRides compared to last week:")
     postalcode_popular = three_most_popular_vehicle(conn)

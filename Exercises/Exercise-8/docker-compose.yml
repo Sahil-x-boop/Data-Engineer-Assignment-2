@@ -1,10 +1,8 @@
+version: "3.9"
 
 services:
-    run:
-      image: "exercise-8"
-      build: .
-      volumes:
-        - .:/app
-      command: python3 main.py
-
-
+  run:
+    image: "exercise-8"
+    volumes:
+      - .:/app
+    command: python3 main.py

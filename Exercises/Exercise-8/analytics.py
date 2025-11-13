@@ -1,7 +1,7 @@
 def load_csv_into_table(conn):
     conn.execute("""
-        copy electric_cars from data/Electric_Vehicle_Population_Data.csv
-        (AUTO DETECT TRUE, HEADER TRUE)
+        copy electric_cars from 'data/Electric_Vehicle_Population_Data.csv'
+        (AUTO_DETECT TRUE, HEADER TRUE)
     """)
 
 def cars_per_city(conn):
@@ -42,3 +42,4 @@ def cars_by_modelyear(conn):
         group by Model_Year
         order by total_count desc;
     """).fetchdf()
+

@@ -33,3 +33,4 @@ def rides_vs_last_week(daily: pl.LazyFrame) -> pl.DataFrame:
     ])
     return result
     
+

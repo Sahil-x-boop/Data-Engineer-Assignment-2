@@ -8,14 +8,13 @@ def main():
     
     daily = rides_per_day(lf)
     daily_result = daily.collect()
-    print(daily.head())
+    print(daily_result.head())
     
     weekly_result = weekly_stats(daily)
     print(weekly_result.head())
     
     comparison = rides_vs_last_week(daily)
-    print(comparison.head())
-
+    print(comparison.head(10))
 
 if __name__ == "__main__":
     main()

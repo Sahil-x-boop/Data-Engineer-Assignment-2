@@ -1,10 +1,11 @@
-FROM ubuntu:18.04
+FROM python:3.11-slim
 
-RUN apt-get update && \
-    apt-get install -y vim software-properties-common python3.8 python3-pip libpq-dev build-essential libssl-dev libffi-dev python3-dev && \
-    apt-get clean
+WORKDIR /app
 
-WORKDIR app
+COPY requirements.txt /app/requirements.txt
+
+RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . /app
 
-RUN pip3 install -r requirements.txt
+CMD ["python", "main.py"]
